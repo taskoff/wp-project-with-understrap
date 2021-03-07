@@ -7122,4 +7122,11 @@ document.addEventListener('keydown', function (e) {
   } else if (e.code === 'ArrowLeft') {
     goPrev();
   }
-});
+}); // ========= Hide more of six listing ===========
+// let listing = document.querySelectorAll('.listing-item-container');
+// listing = Array.from(listing);
+// listing.forEach(e=>{
+//     if(listing.indexOf(e) > 5){
+//         e.classList.add('hidden')
+//     }
+// })

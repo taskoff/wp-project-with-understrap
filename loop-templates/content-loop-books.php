@@ -1,7 +1,7 @@
 <div class="listing-container">
     <?php 
             $args = array(
-                'posts_per_page'   => -1, // -1 here will return all posts
+                'posts_per_page'   => 6, // -1 here will return all posts
                 'post_type'        => 'books', //your custom post type
                 'post_status'      => 'publish',
             );
@@ -10,8 +10,10 @@
             foreach ($projects as $project) {
                 printf('<div class="listing-item-container">
                             <div class="listing-item-img">%s</div>
+                            <div class="listing-item-text">
                             <div class="listing-item-title"><a href="%s">%s</a></div>
                             <div class="listing-item-excerpt"><a href="%s">%s</a></div>
+                            </div>
                         </div>', get_the_post_thumbnail($project->ID),
                         get_permalink($project->ID), 
                         $project->post_title, 

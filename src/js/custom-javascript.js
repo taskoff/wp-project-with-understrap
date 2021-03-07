@@ -58,3 +58,16 @@ document.addEventListener('keydown',function(e){
     }
 });
 
+// ========= Hide more of six listing ===========
+
+// let listing = document.querySelectorAll('.listing-item-container');
+// listing = Array.from(listing);
+
+// listing.forEach(e=>{
+//     if(listing.indexOf(e) > 5){
+
+//         e.classList.add('hidden')
+//     }
+    
+// })
+
