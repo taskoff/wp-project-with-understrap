@@ -72,23 +72,19 @@ body {
     width: 100%;
     margin-top: -110px;
 }
-
-.call-to-action-section {
-
-    &-title {
-        text-align: center;
-        font-size: 42px;
-        font-weight: 300;
-        color: $purple-400;
-        padding-top: 100px;
-    }
-    .under-title-text {
-        text-align: center;
-        font-size: 24px;
-        color: #999999;
-        font-weight: 300;
-        padding-top: 0;
-    }
+.h2-home-page {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 300;
+    color: $purple-400;
+    padding-top: 100px;
+}
+.under-title-text {
+    text-align: center;
+    font-size: 24px;
+    color: #999999;
+    font-weight: 300;
+    padding-top: 0;
 }
 
 
@@ -97,6 +93,7 @@ body {
     width: 100%;
     background-position: top;
     background-size: cover;
+    margin-top: 20px;
     
     
     &-description {
@@ -128,13 +125,18 @@ body {
 // ========== Listing Items Styles ====================
 
 .list-items {
-    margin-top: 100px;
+    // margin-top: 100px;
 }
 
 .listing-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 20px;
+    column-gap: 30px;
+    row-gap: 30px;
+    margin-top: 20px;
+    .listing-item-container {
+        box-shadow: 0 0 2px grey;
+    }
     .listing-item-title a{
         font-size: 24px;
         color: grey;

@@ -27,7 +27,7 @@ get_header();
         </div>
     </section>
     <section class="call-to-action-section">
-        <h2 class="call-to-action-section-title">HOW LOVEFIT WORKS</h2>
+        <h2 class="call-to-action-section-title h2-home-page">HOW LOVEFIT WORKS</h2>
         <div class="under-title-text">Fall in love with Fitness</div>
     
         <div class="call-to-action-container" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/call-to-action-section-img.jpg)">
@@ -60,6 +60,8 @@ get_header();
         </div>
     </section>
     <section class="list-items container">
+        <h2 class="h2-home-page">LATEST WORKOUT</h2>
+        <div class="under-title-text">Fall in love with Fitness</div>
         <?php get_template_part( 'loop-templates/content-loop-books' ); ?>
 </section>
    
