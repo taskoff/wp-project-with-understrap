@@ -1,0 +1,165 @@
+// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+@import'./_hero-slider.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.top-nav {
+    background-color: rgb(51, 49, 49);
+    padding: 5px 115px;
+    margin: 0 75px;
+    position: relative;
+    z-index: 999;
+    
+    a {
+        font-size: 12px;
+        font-weight: 600;
+        color: #ffffff;
+        padding-right: 15px;
+        i {
+            padding-right: 10px;
+        }
+    }
+}
+
+#wrapper-navbar {
+    
+    position:sticky;
+    margin: 0 75px;
+    
+    // background-color:transparent;
+    top:0;
+    
+    z-index:99;
+    
+    #main-nav {
+        padding: 0 105px 0 105px;
+        background-color: #ffffff;
+        height: 70px;
+        transition: height 0.8s;
+        transition: background-color 0.8s;
+        border-bottom-right-radius:5px;
+        border-bottom-left-radius:5px;
+        &.black {
+            background-color: rgba(207, 207, 207, 0.8);
+            // padding: 10px 0;
+            height: 60px;
+        }
+        a {
+            color: rgb(83, 83, 83);
+            &:hover {
+                color: darken(rgb(83, 83, 83), 20%);
+            }
+        }
+    
+    }
+    #s {
+        background-color: transparent;
+    }
+    
+}
+
+.main {
+    // background-color: grey;
+}
+
+.hero-section {
+    width: 100%;
+    margin-top: -110px;
+}
+
+.call-to-action-section {
+
+    &-title {
+        text-align: center;
+        font-size: 42px;
+        font-weight: 300;
+        color: $purple-400;
+        padding-top: 100px;
+    }
+    .under-title-text {
+        text-align: center;
+        font-size: 24px;
+        color: #999999;
+        font-weight: 300;
+        padding-top: 0;
+    }
+}
+
+
+.call-to-action-container {
+    min-height: 800px;
+    width: 100%;
+    background-position: top;
+    background-size: cover;
+    
+    
+    &-description {
+        text-align: center;
+        font-size: 18px;
+        padding: 20px 0;
+        font-weight: 300;
+        color: rgb(68,68,68);
+        
+        
+    }
+    .cards-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 20px;
+        .icon-box, .card-title, .card-description {
+            text-align: center;
+            font-weight: 300;
+        }
+        .icon-box {
+            padding-bottom: 20px;
+        }
+        .card-description {
+            font-size: 14px;
+        }
+    }
+}
+
+// ========== Listing Items Styles ====================
+
+.list-items {
+    margin-top: 100px;
+}
+
+.listing-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    .listing-item-title a{
+        font-size: 24px;
+        color: grey;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    .listing-item-excerpt  {
+        &>a {
+            color: #999999;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        p {
+            .btn {
+    
+                display: none;
+            }
+            a:after {
+                display: block;
+                content: 'Read more...';
+                
+            }
+        }
+
+    }
+}
