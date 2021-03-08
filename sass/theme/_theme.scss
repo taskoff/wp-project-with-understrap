@@ -187,3 +187,122 @@ body {
 .hidden {
     display: none;
 }
+
+// =============== testimonials slider ===============
+.testimonial-section {
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    &-title {
+        text-align: center;
+        font-size: 42px;
+        font-weight: 300;
+        color: white;
+        padding-top: 100px;
+        margin: 0;
+    }
+    &-undertitle {
+        text-align: center;
+        color: white;
+        font-weight: 300;
+        font-size: 22px;
+        margin-bottom: 1em;
+    }
+}
+
+.testimonials-container {
+    position: relative;
+    margin-top: 100px;
+}
+
+.testimonials-listing-container {
+    position: relative;
+    background-color: rgba(34, 31, 31, 0.7);
+    width: 500px;
+    min-height: 180px;
+    margin: auto;
+    border-radius: 5px;
+    
+
+    .listing-item-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+        opacity: 0;
+        transition: opacity 0.5s;
+        ;
+
+        &.active {
+            opacity: 1;
+        }
+    }
+
+    .listing-item-img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+        margin: auto;
+        img {
+            width: 100%;
+            height: auto;
+
+
+        } 
+    }
+    .listing-item-text {
+        text-align: center;
+        color: white;
+        font-weight: 300;
+        
+        .listing-item-excerpt {
+            font-style: italic;
+            p {
+                display: inline;
+                
+            }
+        }
+    }
+    
+}
+.bullets-container-first {
+    margin-top: 100px;
+   
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    .bullet {
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background-color: $primary;
+        margin-right: 10px;
+        border: 1px solid  $primary;
+        transition: background-color 0.5s;
+        cursor: pointer;
+        overflow: hidden;
+
+        &.active {
+            background-color: white;
+        }
+        &.bullet {
+            &::before {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                
+            }
+        }
+
+    }
+
+
+}

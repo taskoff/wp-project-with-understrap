@@ -63,8 +63,15 @@ get_header();
         <h2 class="h2-home-page">LATEST WORKOUT</h2>
         <div class="under-title-text">Fall in love with Fitness</div>
         <?php get_template_part( 'loop-templates/content-loop-books' ); ?>
-</section>
-   
+    </section>
+    <section class="testimonials-section" >
+        
+        <div class="testimonials-container">
+            <?php get_template_part( 'global-templates/testimonial-section' ); ?>
+            <!-- <div class="bullets-container-first"> -->
+        </div>
+        
+    </section>
     <!-- <div class="form-container">
         <?php echo do_shortcode('[contact-form-7 id="13" title="Contact form 1"]') ?>
     </div> -->
