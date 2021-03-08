@@ -72,9 +72,9 @@ get_header();
         </div>
         
     </section>
-    <!-- <div class="form-container">
-        <?php echo do_shortcode('[contact-form-7 id="13" title="Contact form 1"]') ?>
-    </div> -->
+    <div class="subscribe-form-container">
+        <?php get_template_part( 'global-templates/subscribe-section' ); ?>    
+    </div>
 </div>
 <?php
 get_footer();
