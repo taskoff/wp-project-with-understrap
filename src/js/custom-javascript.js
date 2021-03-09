@@ -1,5 +1,18 @@
 // Add your JS customizations here
 
+const menu = document.getElementById('main-nav');
+document.addEventListener('scroll', function(e){
+    // console.log(window.scrollY)
+    if (window.scrollY > 60) {
+        menu.classList.add('black');
+    } else {
+        menu.classList.remove('black');
+    }
+
+
+})
+
+
 
 
 // ========= Slider for testimonials ===========

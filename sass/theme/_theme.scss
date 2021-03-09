@@ -12,9 +12,14 @@ body {
 .top-nav {
     background-color: rgb(51, 49, 49);
     padding: 5px 115px;
-    margin: 0 75px;
+    // margin: 0 75px;
     position: relative;
     z-index: 999;
+
+    @include lg {
+        padding: 10px;
+        margin: 0 20px;
+    }
     
     a {
         font-size: 12px;
@@ -25,30 +30,67 @@ body {
             padding-right: 10px;
         }
     }
+   
 }
 
 #wrapper-navbar {
     
     position:sticky;
-    margin: 0 75px;
-    
-    // background-color:transparent;
+    // margin: 0 75px;
     top:0;
-    
     z-index:99;
+    
+    @include lg {
+        padding: 0;
+        margin: 0 20px;
+    }
     
     #main-nav {
         padding: 0 105px 0 105px;
         background-color: #ffffff;
+        margin: 0;
         height: 70px;
         transition: height 0.8s;
         transition: background-color 0.8s;
+        transition: margin 0.8s;
+
         border-bottom-right-radius:5px;
         border-bottom-left-radius:5px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        
+        @include lg {
+            padding: 0;
+            ul {
+                margin-top: -8px;
+                li {
+                    background-color: white;
+                    padding: 0 20px;
+                    a {
+    
+                        border-bottom: 1px solid rgb(190, 186, 186);
+                    }
+                }
+            }
+            
+        }
+        @include sm {
+            .input-group {
+                display: none;
+            }
+        }
         &.black {
-            background-color: rgba(207, 207, 207, 0.8);
+            background-color: rgba(207, 207, 207, 0.9);
             // padding: 10px 0;
             height: 60px;
+            margin: 0 75px;
+            @include lg {
+                margin: 0 30px;
+            }
+            @include md {
+                margin: 0 10px;
+            }
         }
         a {
             color: rgb(83, 83, 83);
@@ -57,9 +99,38 @@ body {
             }
         }
         .navbar-brand {
+            @include lg {
+                padding-left: 20px;
+            }
             img {
                 width: 120px;
                 height: auto;
+                @include lg {
+                    width: 80px;
+                }
+            }
+        }
+        .navbar-toggler {
+            
+            background-color: grey;
+            padding: 10px;
+            // position: absolute;
+            // top: 10px;
+            // right: 20px;
+            @include lg {
+                top: 5px;
+                order: 2;
+            }
+            span {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .bar {
+                    height: 4px;
+                    border-radius: 4px;
+                    background-color: white;
+                   
+                }
             }
         }
     
@@ -76,7 +147,7 @@ body {
 
 .hero-section {
     width: 100%;
-    margin-top: -110px;
+    // margin-top: -70px;
 }
 .h2-home-page {
     text-align: center;
@@ -115,6 +186,17 @@ body {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         column-gap: 20px;
+        @include md {
+            grid-template-columns: 1fr;
+            column-gap: 0px;
+            row-gap: 20px;
+
+            .call-to-action-card {
+                background-color: rgba(255, 255, 255, 0.5);
+                border-radius: 5px;
+                
+            }
+        }
         .icon-box, .card-title, .card-description {
             text-align: center;
             font-weight: 300;
@@ -125,6 +207,8 @@ body {
         .card-description {
             font-size: 14px;
         }
+        
+
     }
 }
 
@@ -141,6 +225,10 @@ body {
     column-gap: 30px;
     row-gap: 30px;
     margin-top: 20px;
+    @include md {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
     .listing-item-container {
         box-shadow: 0 0 2px grey;
         &.hidden {
@@ -229,15 +317,21 @@ body {
     background-color: rgba(34, 31, 31, 0.7);
     width: 500px;
     min-height: 180px;
+    @include sm {
+        width: 90%;
+        min-height: 220px;
+    }
     margin: auto;
     border-radius: 5px;
+    overflow: hidden;
     
 
     .listing-item-container {
         position: absolute;
-        top: 50%;
+        top: 10px;
         left: 50%;
-        transform: translate(-50%, -50%);
+        // transform: translateY(-50%);
+        transform: translateX(-50%);
         
         opacity: 0;
         transition: opacity 0.5s;
@@ -333,11 +427,23 @@ body {
         p {
             margin: 0;
         }
+        @include md {
+            display: block;
+            p {
+                text-align: center;
+            }
+            
+        }
+        
         
     }
     .wpcf7 input[type=email] {
         width: 300px;
         margin-right: 10px;
+        @include md {
+            width: 90%;
+            margin: auto;
+        }
         &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
             color: rgb(204, 200, 200);
             font-weight: 300;
@@ -360,7 +466,11 @@ body {
         &:hover {
             background-color: darken($primary, 15%);
         }
+        @include md {
+            margin-left: 50px;
+        }
     }
+   
    
 
 }
@@ -385,7 +495,7 @@ body {
     }
     .footer-widget {
         display: flex;
-        justify-content: center;
+        // justify-content: center;
         div {
             display: flex;
             align-items: center;
@@ -395,6 +505,9 @@ body {
         position: absolute;
         right: 50px;
         bottom: 0;
+        @include sm {
+            display: none;
+        }
     }
 }
 
@@ -404,7 +517,7 @@ body {
 
 .wrapper.bottom-footer {
     background-color: rgb(50,105,169);
-    padding: 10px;
+    padding: 20px;
     p {
         margin: 0;
         text-align: center;

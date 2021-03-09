@@ -7070,7 +7070,16 @@
   }
 })();
 // Add your JS customizations here
-// ========= Slider for testimonials ===========
+const menu = document.getElementById('main-nav');
+document.addEventListener('scroll', function (e) {
+  // console.log(window.scrollY)
+  if (window.scrollY > 60) {
+    menu.classList.add('black');
+  } else {
+    menu.classList.remove('black');
+  }
+}); // ========= Slider for testimonials ===========
+
 const testimonials = document.querySelectorAll('.testimonials-listing-container .listing-item-container');
 let activeId = 0;
 const activeClass = 'active';
