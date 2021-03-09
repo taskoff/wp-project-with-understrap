@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<!-- ******************* The Hero Widget Area ******************* -->
 
-	<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+	<div id="carouselExampleControls" class="carousel slider" data-ride="carousel">
 
 		<div class="carousel-inner" role="listbox">
 

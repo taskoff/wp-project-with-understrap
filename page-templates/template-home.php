@@ -14,17 +14,8 @@ get_header();
 ?>
 <div class="main">
     <section class="hero-section">
-        <div class="slider">
-            <div class="slide-ana">
-                <div style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/hero-slider-img-1.jpg)"><span class="slider-title">Slide One Explanation</span></div>
-                <div style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/hero-slider-img-2.jpg)"><span class="slider-title">Slide Two Explanation</span></div>
-                <div style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/hero-slider-img-3.jpg)"><span class="slider-title">Slide Three Explanation</span></div>
-                <!-- <div style="background-image: url('https://source.unsplash.com/1600x600/?nature')"><span class="title">Slide Four Explanation</span></div> -->
-            </div>
-            <span class="icon-arrow_back" id="prev"></span>
-            <span class="icon-arrow_forward" id="next"></span>
-        
-        </div>
+    <?php get_template_part( 'global-templates/hero' ); ?>
+
     </section>
     <section class="call-to-action-section">
         <h2 class="call-to-action-section-title h2-home-page">HOW LOVEFIT WORKS</h2>

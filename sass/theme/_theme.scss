@@ -56,6 +56,12 @@ body {
                 color: darken(rgb(83, 83, 83), 20%);
             }
         }
+        .navbar-brand {
+            img {
+                width: 120px;
+                height: auto;
+            }
+        }
     
     }
     #s {
@@ -357,4 +363,53 @@ body {
     }
    
 
+}
+
+// ============ Footer CSS ================
+
+.footer-container {
+    position: relative;
+    
+    #media_image-2 {
+        img {
+            max-width: 150px !important;
+        }
+    }
+    .menu {
+        list-style: none;
+        a {
+            color: #ffffff;
+            font-weight: 300;
+            font-size: 14px;
+        }
+    }
+    .footer-widget {
+        display: flex;
+        justify-content: center;
+        div {
+            display: flex;
+            align-items: center;
+        }
+    }
+    #media_image-3 {
+        position: absolute;
+        right: 50px;
+        bottom: 0;
+    }
+}
+
+#wrapper-footer-full {
+    background-color: rgb(64,136,218);
+}
+
+.wrapper.bottom-footer {
+    background-color: rgb(50,105,169);
+    padding: 10px;
+    p {
+        margin: 0;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 300;
+        color: rgb(197, 194, 194);
+    }
 }

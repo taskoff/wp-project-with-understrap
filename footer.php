@@ -12,10 +12,13 @@ defined( 'ABSPATH' ) || exit;
 
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
+<div class="logo-and-social">
+	
+</div>
 
 <?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
 
-<div class="wrapper" id="wrapper-footer">
+<div class="wrapper bottom-footer" id="wrapper-footer">
 
 	<div class="<?php echo esc_attr( $container ); ?>">
 
@@ -27,7 +30,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<div class="site-info">
 
-						<?php understrap_site_info(); ?>
+						<!-- <?php understrap_site_info(); ?> -->
+						<p class="footer-text">© 2021 - All rights reserved.</p>
 
 					</div><!-- .site-info -->
 
