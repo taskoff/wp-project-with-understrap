@@ -62,9 +62,9 @@
 .icon-arrow_back, .icon-arrow_forward {
     max-width: 50px;
 }
-// .carousel-item {
-//     img {
-//         width: 100%;
-//         height: 100% ;
-//     }
-// }
+.carousel-item {
+    img {
+        width: auto;
+        height: 700px !important ;
+    }
+}

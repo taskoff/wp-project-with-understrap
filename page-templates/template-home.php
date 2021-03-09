@@ -14,7 +14,7 @@ get_header();
 ?>
 <div class="main">
     <section class="hero-section">
-    <?php get_template_part( 'global-templates/hero' ); ?>
+        <?php get_template_part( 'global-templates/hero' ); ?>
 
     </section>
     <section class="call-to-action-section">
