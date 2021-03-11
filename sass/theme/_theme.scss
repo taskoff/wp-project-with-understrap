@@ -647,16 +647,28 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 30px;
+    @include md {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+    }
 }
 .single-post-title {
     font-weight: 300;
     color: $purple-400;
     padding-bottom: 20px;
     margin-top: 100px;
+    @include md {
+        margin-top: 10px;
+    }
 }
 .post-navigation {
     margin-bottom: 100px;
     margin-top: 20px;
+    @include md {
+        .nav-links {
+            padding: 0 20px;
+        }
+    }
 }
 
 // ========== Archive Books CSS ================
