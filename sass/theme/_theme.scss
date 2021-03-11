@@ -168,7 +168,10 @@ body {
 
 .hero-section {
     width: 100%;
-    // margin-top: -70px;
+    .carousel-item img {
+        width: 100%;
+    }
+    
 }
 .h2-home-page {
     text-align: center;
