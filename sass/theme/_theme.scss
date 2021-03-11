@@ -529,7 +529,7 @@ body {
         position: absolute;
         right: 50px;
         bottom: 0;
-        @include sm {
+        @include md {
             display: none;
         }
     }
@@ -579,6 +579,9 @@ body {
     display: flex;
     flex-wrap: wrap;
     margin-top: 100px;
+    @include md {
+        display: block;
+    }
 
     .form-wrapper {
         h2 {
@@ -586,6 +589,9 @@ body {
         }
         width: 70%;
         padding: 20px;
+        @include md {
+            width: 100%;
+        }
         form {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -601,6 +607,10 @@ body {
                     background-color: darken($primary, 15%);
                 }
             }
+            @include md {
+                display: block;
+            }
+
         }
     }
     .sidebar-wrapper {
@@ -629,6 +639,9 @@ body {
             a {
                 margin-right: 10px;
             }
+        }
+        @include md {
+            width: 100%;
         }
     }
 }
