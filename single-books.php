@@ -19,7 +19,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="row">
 
 			<!-- Do the left sidebar check -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
+			<!-- <?php get_template_part( 'global-templates/left-sidebar-check' ); ?> -->
 
 			<main class="site-main" id="main">
 
@@ -41,7 +41,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 	</div><!-- #content -->
 
 </div><!-- #single-wrapper -->
-
+<div class="subscribe-form-container">
+        <?php get_template_part( 'global-templates/subscribe-section' ); ?>    
+    </div>
 <?php
 get_footer();
 

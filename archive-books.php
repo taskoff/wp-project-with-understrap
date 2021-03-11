@@ -16,7 +16,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
 <div class="wrapper" id="archive-wrapper">
-
+<div class="archive-page-hero-section">
+	<h1>Best Workout For You</h1>
+</div>
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
 		<div class="row">
@@ -31,8 +33,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 					?>
 					<header class="page-header">
 						<?php
-						the_archive_title( '<h1 class="page-title">', '</h1>' );
-						the_archive_description( '<div class="taxonomy-description">', '</div>' );
+						// the_archive_title( '<h1 class="page-title">', '</h1>' );
+						// the_archive_description( '<div class="taxonomy-description">', '</div>' );
 						?>
 					</header><!-- .page-header -->
 					<?php
@@ -58,7 +60,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			// Display the pagination component.
 			understrap_pagination();
 			// Do the right sidebar check.
-			get_template_part( 'global-templates/right-sidebar-check' );
+			// get_template_part( 'global-templates/right-sidebar-check' );
 			?>
 
 		</div><!-- .row -->
@@ -66,6 +68,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 	</div><!-- #content -->
 
 </div><!-- #archive-wrapper -->
-
+<div class="testimonials-container">
+            <?php get_template_part( 'global-templates/testimonial-section' ); ?>
+            <!-- <div class="bullets-container-first"> -->
+</div>
 <?php
 get_footer();

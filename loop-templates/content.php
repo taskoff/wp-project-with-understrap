@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 
 		<?php
 		the_title(
-			sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+			sprintf( '<h2 class="entry-title single-item-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
 			'</a></h2>'
 		);
 		?>
@@ -29,23 +29,24 @@ defined( 'ABSPATH' ) || exit;
 		<?php endif; ?>
 
 	</header><!-- .entry-header -->
+	<div class="single-item-content">
+		<?php echo get_the_post_thumbnail( $post->ID, 'medium' ); ?>
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+		<div class="entry-content">
 
-	<div class="entry-content">
+			<?php the_excerpt(); ?>
 
-		<?php the_excerpt(); ?>
+			<?php
+			wp_link_pages(
+				array(
+					'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+					'after'  => '</div>',
+				)
+			);
+			?>
 
-		<?php
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
-
-	</div><!-- .entry-content -->
+		</div><!-- .entry-content -->
+	</div>
 
 	<footer class="entry-footer">
 

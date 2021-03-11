@@ -13,32 +13,37 @@ defined( 'ABSPATH' ) || exit;
 
 	<header class="entry-header">
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php the_title( '<h1 class="entry-title single-post-title">', '</h1>' ); ?>
 
-		<div class="entry-meta">
+		<!-- <div class="entry-meta">
 
 			<?php understrap_posted_on(); ?>
 
-		</div><!-- .entry-meta -->
+		</div> -->
+		<!-- .entry-meta -->
 
 	</header><!-- .entry-header -->
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+	<div class="post-main-wrapper">
+		<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
-	<div class="entry-content">
+		<div class="entry-content">
 
-		<?php the_content(); ?>
+			<?php the_content(); ?>
 
-		<?php
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
+			<?php
+			wp_link_pages(
+				array(
+					'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+					'after'  => '</div>',
+				)
+			);
+			?>
 
-	</div><!-- .entry-content -->
+		</div><!-- .entry-content -->
+	
+	</div>
+
 
 	<footer class="entry-footer">
 

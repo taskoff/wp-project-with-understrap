@@ -27,7 +27,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<!-- ******************* Top Navbar Area ******************* -->
 	<div class="top-nav ">
 			<div class="contact-info">
-				<a href="#"><i class="fa fa-map"></i>Sofia, Address 16</a>
+				<a href=""><i class="fa fa-map"></i>Sofia, Address 16</a>
 				<a href="tel: +359 888 888 888"><i class="fa fa-phone"></i>+359 888 888 888</a>
 			</div>
 		</div>
